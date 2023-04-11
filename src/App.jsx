@@ -1,19 +1,39 @@
 import { useState } from 'react'
+import Box from '@mui/material/Box';
 import PlayPauseButton from './components/PlayPauseButton';
 import ProgressBar from './components/ProgressBar';
-import './App.css'
+import Background from './components/Background';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
 
   const [isPlaying, setIsPlaying] = useState(false)
 
   return (
-    <div>
-      <h1>Welcome to Tree Rave!</h1>
-      <div>Listen now:</div>
+    <Box sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100vh',
+      width: '100vw',
+    }}>
+      <Background />
+      <Box sx={{
+        fontSize: '2rem',
+        fontWeight: 'bold',
+      }}>
+        Welcome to Tree Rave!
+      </Box>
+      <Box sx={{
+        fontSize: '1.5rem',
+      }}>
+        Listen now:
+      </Box>
       <PlayPauseButton isPlaying={isPlaying} setIsPlaying={setIsPlaying}/>
       <ProgressBar />
-    </div>
+      <WhatsAppButton />
+    </Box>
   );
 }
 

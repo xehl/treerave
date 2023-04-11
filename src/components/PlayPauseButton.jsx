@@ -6,7 +6,6 @@ export default function PlayPauseButton({ isPlaying, setIsPlaying }) {
 
   const handlePlayPause = () => {
     setIsPlaying(!isPlaying)
-    console.log("isPlaying: ", isPlaying)
   }
 
   return (
@@ -19,10 +18,12 @@ export default function PlayPauseButton({ isPlaying, setIsPlaying }) {
       }}
     >
       <PlayArrowIcon sx={{
-        display: isPlaying ? 'none' : 'block'
+        display: isPlaying ? 'none' : 'block',
+        fontSize: '3rem'
       }} />
       <PauseIcon sx={{
-        display: isPlaying ? 'block' : 'none'
+        display: isPlaying ? 'block' : 'none',
+        fontSize: '3rem'
       }} />
     </Box>
   )
