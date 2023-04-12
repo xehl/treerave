@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Box from '@mui/material/Box';
+
+import HlsPlayer from './components/HlsPlayer';
 import PlayPauseButton from './components/PlayPauseButton';
 import ProgressBar from './components/ProgressBar';
 import Background from './components/Background';
@@ -30,7 +32,8 @@ function App() {
       }}>
         Listen now:
       </Box>
-      <PlayPauseButton isPlaying={isPlaying} setIsPlaying={setIsPlaying}/>
+      <PlayPauseButton isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+      <HlsPlayer isPlaying={isPlaying} />
       <ProgressBar />
       <WhatsAppButton />
     </Box>
